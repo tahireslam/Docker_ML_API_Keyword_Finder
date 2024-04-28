@@ -1,0 +1,10 @@
+FROM python:3.9
+
+WORKDIR /KD-API
+
+COPY requirment.txt .
+RUN pip install -r requirment.txt
+
+COPY ./src ./src
+
+CMD ["python", "./src/main.py"]
